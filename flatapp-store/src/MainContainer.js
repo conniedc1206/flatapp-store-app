@@ -1,25 +1,23 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import RecommendedList from './RecommendedList'
 import FilteredList from './FilteredList'
-import projects from './db.json'
 
 function MainContainer() {
 
-    const [apps, setApps] = useState(projects)
-    
-    // Replace setApps(projects) with fetch later
+    const [apps, setApps] = useState([])
     
     useEffect(() => {
-        setApps(projects);
+        fetch("http://localhost:3001/projects")
+        .then(r => r.json())
+        .then(setApps)
     }, [])
-  
+
     return (
     <div>
         {/* <SearchBar />
         <FilterBar /> */}
         <RecommendedList apps={apps} />
-        <FilteredList apps={apps} />
+        {/* <FilteredList apps={apps} /> */}
     </div>
   )
 }
