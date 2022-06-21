@@ -1,16 +1,16 @@
 import {Route, Switch} from "react-router-dom";
-import Header from "./Header";
-import About from "./About"
-import Login from "./Login"
-import Seller from "./Seller"
-import Blogs from "./Blogs"
-import Cart from "./Cart"
+// import Header from "./Header";
+// import About from "./About"
+// import Login from "./Login"
+// import Seller from "./Seller"
+// import Blogs from "./Blogs"
+// import Cart from "./Cart"
 import MainContainer from "./MainContainer"
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header />
 
       <Switch>
         <Route path="/about">
@@ -31,7 +31,7 @@ function App() {
         <Route exact path="/">
           <Store />
         </Route>
-      </Switch>
+      </Switch> */}
 
       <MainContainer />
 
