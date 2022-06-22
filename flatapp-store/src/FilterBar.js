@@ -14,31 +14,31 @@ function FilterBar({ setPhase }) {
     justifyContent="space-evenly" >
         <Button
         onClick={handleClick}
-        value="p1"
+        value="1"
         borderRadius="50px" >
           Phase 1
         </Button>
         <Button
         onClick={handleClick}
-        value="p2"
+        value="2"
         borderRadius="50px" >
           Phase 2
         </Button>
         <Button
         onClick={handleClick}
-        value="p3"
+        value="3"
         borderRadius="50px" >
           Phase 3
         </Button>
         <Button
         onClick={handleClick}
-        value="p4"
+        value="4"
         borderRadius="50px" >
           Phase 4
         </Button>
         <Button
         onClick={handleClick}
-        value="p5"
+        value="5"
         borderRadius="50px" >
           Phase 5
         </Button>

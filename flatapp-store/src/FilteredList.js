@@ -4,10 +4,7 @@ import { Box, Flex } from "@chakra-ui/react"
 
 function FilteredList({ apps, phase }) {
 
-  //pick out the integer from phase state
-  const phaseNum = parseInt(phase.charAt(1))
-
-  const filteredApps = apps.filter(app => app.phase === phaseNum);
+  const filteredApps = apps.filter(app => app.phase === phase);
 
   const renderApps = filteredApps.map(app => {
     return <ProjectItem key={app.id} app={app} />

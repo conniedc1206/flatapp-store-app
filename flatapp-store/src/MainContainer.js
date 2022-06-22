@@ -7,7 +7,7 @@ import SearchBar from './SearchBar'
 function MainContainer() {
 
     const [apps, setApps] = useState([])
-    const [phase, setPhase] = useState("p1")
+    const [phase, setPhase] = useState("1")
     const [search, setSearch] = useState("")
     
     useEffect(() => {
@@ -19,7 +19,7 @@ function MainContainer() {
     return (
     <div>
         <SearchBar setSearch={setSearch} search={search} />
-        <RecommendedList apps={apps} search={search}/>
+        <RecommendedList apps={apps} search={search} />
         <FilterBar setPhase={setPhase} />
         <FilteredList apps={apps} phase={phase} />
     </div>
