@@ -6,9 +6,13 @@ import NavBar from "./NavBar"
 // import Blogs from "./Blogs"
 // import Cart from "./Cart"
 import MainContainer from "./MainContainer"
+import { useState } from "react"
+import ItemDetails from "./ItemDetails"
 
 
 function App() {
+
+  const [apps, setApps] = useState([])
 
   return (
     <div>
@@ -30,7 +34,10 @@ function App() {
           <Cart />
         </Route> */}
         <Route exact path="/">
-         <MainContainer />
+         <MainContainer apps={apps} setApps={setApps} />
+        </Route>
+        <Route path="/details/:id">
+          <ItemDetails />
         </Route>
       </Switch>
     </div>
