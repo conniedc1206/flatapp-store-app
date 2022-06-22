@@ -1,28 +1,46 @@
 import React from "react";
-// // import { useState } from "react";
+import { useState } from "react";
 
-function Login () {
-  
-    return(
-      <div className="login">
+function Login() {
+  const [log, setLog] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLog.reset();
+  };
+
+  return (
+    <div className="login">
       <form>
         <h1>Login</h1>
         <label htmlFor="name">UserName</label>
-                <input type="text" id="name" value="" />
-                <br></br>
-                <br></br>
-        <label htmlFor="name">Password</label>        
-                <input type="password" id="password" value="password"/>
-                <br></br>
-                <br></br>
+        <input
+          type="text"
+          id="name"
+          onChange={(e) => setLog(e.target.value)}
+          value={log}
+        />
+        <br></br>
+        <br></br>
+        <label htmlFor="user-password">Password</label>
+        <input
+          type="password"
+          id="user-password"
+          name="user-password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
+        <br></br>
+        <br></br>
         {/* <label htmlFor="name">Newsletter</label>
                 <input type="checkbox" id="newsletter" value="newsletter"/> */}
-                <button id="submit" type="submit">Login</button>
-          
+        <button id="submit" type="submit">
+          Login
+        </button>
       </form>
     </div>
-  
-    )
-  }
+  );
+}
 
 export default Login;
