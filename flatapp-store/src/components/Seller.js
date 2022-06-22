@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import { useState } from "react";
-import "./style.css";
+import "../style.css";
 
 function Seller() {
   const initialState = {
