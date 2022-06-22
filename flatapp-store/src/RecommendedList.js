@@ -1,22 +1,42 @@
 import React from 'react'
-import RecommendedItem from './RecommendedItem'
+import ProjectItem from './ProjectItem';
+import { Flex } from "@chakra-ui/react"
 
-function RecommendedList({ apps }) {
+function RecommendedList({ apps, search }) {
   
-    let sortedApps = apps.sort((appA, appB) => {
+    let renderRecommended = [];
+    const sortedApps = apps.sort((appA, appB) => {
         return appB.likes - appA.likes;
     })
-    
-    
-    const renderRecommended = sortedApps.map((app) => {
-        return <RecommendedItem key={app.id} app={app} />
-    })
+
+    if (search === ""){
+        const truncatedApps = sortedApps.slice(0, 5)
+        renderRecommended = truncatedApps.map(app => {
+            return <ProjectItem key={app.id} app={app} />
+        })
+    }
+    else {
+        const matchingApps = sortedApps.filter(app => {
+           return app.appName.toLowerCase().includes(search.toLowerCase())
+        })
+        console.log(matchingApps)
+        renderRecommended = matchingApps.map(app => {
+            return <ProjectItem key={app.id} app={app} />
+        })
+    }
+
 
     return (
-    <div>
-        {/*eventually these need to render left to right*/}
+    <Flex
+    width="75%"
+    margin="auto" 
+    marginTop="0.5%" 
+    borderWidth="1px"
+    borderRadius="md"
+    padding="10px" 
+    height="200px">
         {renderRecommended}
-    </div>
+    </Flex>
   )
 }
 

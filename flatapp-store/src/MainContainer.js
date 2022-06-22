@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import RecommendedList from './RecommendedList'
 import FilteredList from './FilteredList'
+import FilterBar from './FilterBar'
+import SearchBar from './SearchBar'
 
 function MainContainer() {
 
     const [apps, setApps] = useState([])
+    const [phase, setPhase] = useState("p1")
+    const [search, setSearch] = useState("")
     
     useEffect(() => {
-        fetch("http://localhost:3001/projects")
+        fetch("http://localhost:3000/apps")
         .then(r => r.json())
         .then(setApps)
     }, [])
 
     return (
     <div>
-        {/* <SearchBar />
-        <FilterBar /> */}
-        <RecommendedList apps={apps} />
-        {/* <FilteredList apps={apps} /> */}
+        <SearchBar setSearch={setSearch} search={search} />
+        <RecommendedList apps={apps} search={search}/>
+        <FilterBar setPhase={setPhase} />
+        <FilteredList apps={apps} phase={phase} />
     </div>
   )
 }
