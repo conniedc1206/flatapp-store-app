@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom";
 import { useState } from "react";
-import "./style.css";
+import "../style.css";
 
-function Seller({ onAddProject }) {
+function Seller() {
   const initialState = {
     appName: "",
     image: "",
@@ -25,9 +25,7 @@ function Seller({ onAddProject }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const configObj = {
-    // fetch("http://localhost:3000/apps"), {
-    
+    const configObj = {  
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,27 +35,26 @@ function Seller({ onAddProject }) {
     };
 
     fetch("http://localhost:3000/apps", configObj)
-      .then((res) => res.json())
-      .then((project) => {
-        console.log(project);
-        setFormData({
-          appName: "",
-          image: "",
-          developerNames: "",
-          githubRepo: "",
-          appUrl: "",
-          about: "",
-          phase: "",
-        });
-        setFormData.reset()
-      });
+      // .then((res) => res.json())
+      // .then((project) => 
+      //   console.log(project));
+
+    setFormData({
+      appName: "",
+      image: "",
+      developerNames: "",
+      githubRepo: "",
+      appUrl: "",
+      about: "",
+      phase: "",
+    });
   };
 
   return (
     <div>
       <form id="form1" onSubmit={handleSubmit}>
         <h1>Seller Account</h1>
-        <label htmlfor="creators">Creators:<em> (ex. Connie, Mark, Samantha, Harrison)</em></label>
+        <label htmlFor="developerNames">Developers:</label>
         <br></br>
         <input
           type="text"
@@ -65,10 +62,11 @@ function Seller({ onAddProject }) {
           id="developerNames"
           onChange={handleChange}
           value={formData.developerNames}
+          placeholder="ex. Connie, Mark, Samantha, Harrison"
         />
         <br></br>
         <br></br>
-        <label htmlfor="appName">App Title:</label>
+        <label htmlFor="appName">App Title:</label>
         <br></br>
         <input
           type="text"
@@ -79,7 +77,7 @@ function Seller({ onAddProject }) {
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="appUrl">App URL:</label>
+        <label htmlFor="appUrl">App URL:</label>
         <br></br>
         <input
           type="text"
@@ -90,29 +88,30 @@ function Seller({ onAddProject }) {
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="developerGithub">GitHub URL:</label>
+        <label htmlFor="githubRepo">GitHub Repo URL:</label>
         <br></br>
         <input
           type="text"
-          id="developerGitHub"
-          name="developerGitHub"
+          id="githubRepo"
+          name="githubRepo"
           onChange={handleChange}
-          value={formData.developerGithub}
+          value={formData.githubRepo}
+          placeholder="https://github.com/user/project"
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="image">Image URL:</label>
+        <label htmlFor="image">Image URL:</label>
         <br></br>
         <input
           type="text"
           id="image"
           name="image"
           onChange={handleChange}
-          value={formData.developerLinkedIn}
+          value={formData.image}
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="about">App Description:</label>
+        <label htmlFor="about">App Description:</label>
         <br></br>
         <textarea
           id="about"
@@ -124,7 +123,7 @@ function Seller({ onAddProject }) {
         ></textarea>
         <br></br>
         <br></br>
-        <label htmlfor="phase">Phase:</label>
+        <label htmlFor="phase">Phase:</label>
         <br></br>
         <select
           id="phase"

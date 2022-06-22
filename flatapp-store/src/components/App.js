@@ -1,12 +1,11 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom"
 import About from "./About"
 import Seller from "./Seller"
 import Login from "./Login"
-import Store from "./Store"
-import NavBar from "./NavBar";
+import NavBar from "./NavBar"
 // import Blogs from "./Blogs"
 // import Cart from "./Cart"
-// import MainContainer from "./MainContainer"
+import MainContainer from "./MainContainer"
 
 
 function App() {
@@ -31,12 +30,9 @@ function App() {
           <Cart />
         </Route> */}
         <Route exact path="/">
-          <Store />
+         <MainContainer />
         </Route>
       </Switch>
-
-      {/* <MainContainer /> */}
-
     </div>
   );
 }
