@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Button } from "@chakra-ui/react"
 
 function Login() {
   const [log, setLog] = useState("");
@@ -35,9 +36,11 @@ function Login() {
         <br></br>
         {/* <label htmlFor="name">Newsletter</label>
                 <input type="checkbox" id="newsletter" value="newsletter"/> */}
-        <button id="submit" type="submit">
+        <Button id="submit" 
+        type="submit"
+        colorScheme="twitter" >
           Login
-        </button>
+        </Button>
       </form>
     </div>
   );

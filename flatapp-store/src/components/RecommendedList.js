@@ -34,7 +34,8 @@ function RecommendedList({ apps, search, handleSelectedApp }) {
         borderWidth="1px"
         borderRadius="md"
         padding="10px" 
-        height="200px">
+        height="200px"
+        justifyContent="center">
         {renderRecommended}
     </Flex>
   )

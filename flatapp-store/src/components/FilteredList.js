@@ -17,7 +17,7 @@ function FilteredList({ apps, phase, handleSelectedApp }) {
       justifyContent="center"
       width="75%"
       margin="auto"
-      marginTop="2%"
+      marginTop=".5%"
       borderWidth="1px"
       borderRadius="md"
       padding="10px"

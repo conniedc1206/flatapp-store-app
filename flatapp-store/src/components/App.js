@@ -17,7 +17,7 @@ function App() {
   function handleSelectedApp(newSelectedAppState) {
     setSelectedApp(newSelectedAppState);
   }
-  //console.log(selectedApp);
+  // console.log(selectedApp);
 
   const handleAddToCart = (appToAdd) => {
     //check if it's not in cart already

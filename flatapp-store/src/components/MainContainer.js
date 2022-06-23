@@ -3,7 +3,7 @@ import RecommendedList from "./RecommendedList";
 import FilteredList from "./FilteredList";
 import FilterBar from "./FilterBar";
 import SearchBar from "./SearchBar";
-import { Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 function MainContainer({ apps, setApps, handleSelectedApp }) {
   const [phase, setPhase] = useState("1");
@@ -18,13 +18,14 @@ function MainContainer({ apps, setApps, handleSelectedApp }) {
   return (
     <Box textAlign="center" >
       <SearchBar setSearch={setSearch} search={search} />
-      <h2>Recommended Apps</h2>
+      <Heading size="sm">Recommended Apps</Heading>
       <RecommendedList
         apps={apps}
         search={search}
         handleSelectedApp={handleSelectedApp}
       />
       <FilterBar setPhase={setPhase} />
+      <Heading marginTop=".5%" size="sm">Find apps by phase</Heading>
       <FilteredList
         apps={apps}
         phase={phase}

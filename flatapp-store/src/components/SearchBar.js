@@ -7,7 +7,7 @@ function SearchBar({ search, setSearch }) {
   };
 
   return (
-    <Flex justifyContent="center" marginBottom="1%">
+    <Flex justifyContent="center" marginBottom="1%" marginTop="3%">
       <Input
         placeholder="Search for a project by name"
         value={search}

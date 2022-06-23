@@ -1,20 +1,26 @@
 import React from "react";
-import "../style.css";
+import { Link } from "react-router-dom"
+import { Box, Flex, Heading, Button } from "@chakra-ui/react"
+import { TiArrowBack } from "react-icons/ti";
 
 function About() {
   return (
-    <div id="about">
-      <h1 id="text-big">Welcome to FlatApp Store</h1>
-      <p id="text-small">
-        FlatApp Store is an e-commerce platform designed to showcase single-page
-        apps created by members of Flatiron “Stranger Strings” cohort, as well
-        as other Flatiron students.
-      </p>
-
-      <br></br>
-
-      <h3 id="text-big">Users will be able to:</h3>
-      <ul id="text-small">
+    <Flex justifyContent="center">
+      <Box 
+      textAlign="center"
+      backgroundColor="#00ACEE" 
+      marginTop="5%"
+      width="800px"
+      height="600px"
+      borderRadius="5%"
+      boxShadow="dark-lg" >
+        <Heading padding="2%" size="3xl">Welcome to FlatApp</Heading>
+        <Heading padding="2%" size="md">
+          FlatApp Store is an e-commerce platform designed to showcase single-page
+          apps created by members of Flatiron “Stranger Strings” cohort, as well
+          as other Flatiron students.
+        </Heading>
+        <ul id="text-small">
         <li>
           Browse and search for cool SPAs by up-and-coming developers from
           Flatiron
@@ -72,15 +78,15 @@ function About() {
         </li>
         <li>we incorporated a UI framework for our styling with Chakra UI</li>
       </ul>
-      <br></br>
-      <br></br>
-
-      <p id="text-small">We're glad to have you here!</p>
-      <br></br>
-      <p id="text-small">Now, let's get exploring!</p>
-      <br></br>
-      <br></br>
-    </div>
+        <Heading size="md">We're glad to have you here!</Heading>
+        <Heading marginBottom="2%" size="md">Now, let's get exploring!</Heading>
+        <Link to="/"> 
+          <Button boxShadow='dark-lg' p='6' rounded='md' bg='white'>
+            <TiArrowBack color="#00ACEE"/>
+          </Button>
+        </Link> 
+      </Box>
+    </Flex>
   );
 }
 
