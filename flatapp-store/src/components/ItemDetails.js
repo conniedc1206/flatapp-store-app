@@ -5,10 +5,15 @@ import { FaRegThumbsUp } from "react-icons/fa";
 import { BsCartPlus } from "react-icons/bs";
 import { TiArrowBack } from "react-icons/ti";
 
-function ItemDetails({ selectedApp }) {
+function ItemDetails({ selectedApp, handleAddToCart }) {
   // const { id } = useParams();
 
   //console.log(selectedApp);
+
+  const addToCart = () => {
+    handleAddToCart(selectedApp);
+  };
+
 
   return (
     <div>
@@ -40,7 +45,7 @@ function ItemDetails({ selectedApp }) {
             </Link>
             <br></br>
             <button>
-              <BsCartPlus />
+              <BsCartPlus onClick={addToCart} />
             </button>
             <br></br>
             <button>
