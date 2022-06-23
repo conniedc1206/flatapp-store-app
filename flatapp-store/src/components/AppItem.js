@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-function ProjectItem({ app, handleSelectedApp }) {
+function AppItem({ app, handleSelectedApp }) {
   const { appName, phase, likes, id } = app;
   let { image } = app;
 
@@ -44,4 +44,4 @@ function ProjectItem({ app, handleSelectedApp }) {
   );
 }
 
-export default ProjectItem;
+export default AppItem;
