@@ -7,15 +7,14 @@ function ProjectItem({ app }) {
     const { appName, phase, likes, id } = app;
     let { image } = app;
 
-    //iterates through all creators and puts commas between their names
-    // let authors = "";
-    // developerName.forEach((author) => authors += author + ", ")
-    // authors = authors.slice(0, authors.length-2);
-
     // if (!image){
         image = "https://coursereport-production.imgix.net/uploads/school/logo/8/original/flatironschool.png?w=200&h=200"
     // }
 
+    //iterates through all creators and puts commas between their names
+    // let authors = "";
+    // developerName.forEach((author) => authors += author + ", ")
+    // authors = authors.slice(0, authors.length-2);
     return (
         <Box
         borderWidth="2px"

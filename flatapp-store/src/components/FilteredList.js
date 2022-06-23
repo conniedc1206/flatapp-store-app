@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
-import { Box, Flex } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 
 function FilteredList({ apps, phase }) {
 
