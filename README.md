@@ -4,6 +4,7 @@ FlatApp Store is an e-commerce platform designed to showcase single-page apps cr
 Users will be able to:
 * Browse and search for cool SPAs by up-and-coming developers from Flatiron
 * See detailed view of each app
+* Save apps to a cart
 * Developers can upload their projects permanently to the platform using our “sellers” page
 
 Technologies used: Our frontend was built with React.js and communicates with our json-server in our backend 
