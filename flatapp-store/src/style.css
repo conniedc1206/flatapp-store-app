@@ -12,10 +12,19 @@ body {
 nav {
   display: flex;
   align-items: center;
-  background-color: lightgray;
+  background-color: rgb(18, 179, 233);
   height: 90 px;
   padding: 30px 25px;
   font-family: Inter, sans-serif;
+  opacity: 85%
+}
+
+.nav--icon {
+  height: 40px;
+  margin-right: 7px;
+  border-radius: 25%;
+  /* border: 1px solid black; */
+
 }
 
 nav > h1 {
@@ -35,7 +44,9 @@ nav > a {
   margin: 1rem 1rem;
   text-decoration: none;
   font-size: 15px;
-  color: black;
+
+  color: blrgb(12, 22, 26);;
+
   border-bottom: 1px solid white;
   transition: 0.1s;
 }
@@ -43,11 +54,13 @@ nav > a {
 /* ABOUT */
 
 #about {
-  background: grey;
-  background-blend-mode: darken;
+
+  background: gray;
+  background-blend-mode: harden;
   background-size: cover;
   background-position: center;
   color: white;
+  opacity: 80%
 }
 
 #text-big {
