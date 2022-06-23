@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style.css";
+import flatapplogo from "../flatapplogo.png";
 
 function NavBar() {
   return (
     <nav>
-      <img src="logo" />
+      <img src={flatapplogo} className="nav--icon" />
       <h1>FlatApp</h1>
-      <Link to="/">Store</Link>
+      <Link exact to="/">
+        Store
+      </Link>
       <Link to="/about">About</Link>
       <Link to="/seller">Seller</Link>
       <Link to="/blogs">Blogs</Link>
