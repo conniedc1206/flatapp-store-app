@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Button } from "@chakra-ui/react"
+import { Button, Box, Flex } from "@chakra-ui/react"
 
 function Login() {
   const [log, setLog] = useState("");
