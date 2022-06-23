@@ -22,7 +22,15 @@ import { FaRegThumbsUp } from "react-icons/fa";
 import { BsCartPlus } from "react-icons/bs";
 import { TiArrowBack } from "react-icons/ti";
 
-function ItemDetails({ selectedApp }) {
+function ItemDetails({ selectedApp, handleAddToCart }) {
+  // const { id } = useParams();
+
+  //console.log(selectedApp);
+
+  const addToCart = () => {
+    handleAddToCart(selectedApp);
+  };
+
 
   return (
     <Box 
@@ -69,7 +77,8 @@ function ItemDetails({ selectedApp }) {
               <Button
               marginLeft="2%"
               marginRight="2%"
-              colorScheme="twitter" >
+              colorScheme="twitter"
+              onClick={addToCart} >
                 <BsCartPlus />
               </Button>
             </PopoverTrigger>

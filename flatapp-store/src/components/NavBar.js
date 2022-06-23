@@ -3,6 +3,7 @@ import { Link as ReactLink } from "react-router-dom";
 import { Box, Image, Heading, Flex, Link } from "@chakra-ui/react"
 import "../style.css";
 import flatapplogo from "../flatapplogo.png";
+import { BsCart3 } from "react-icons/bs";
 
 function NavBar() {
   return (
@@ -76,6 +77,18 @@ function NavBar() {
                     textDecoration: "none",
                     color: "white"
                   }}>Login</Link>
+        </ReactLink>
+        <ReactLink to="/cart">
+          <Link margin="1rem 1rem" 
+                  textDecoration="none"
+                  fontSize="18px"
+                  borderBottom="1px solid white"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "white"
+                  }}>
+            <BsCart3 />
+          </Link>
         </ReactLink>
       </Flex>
     </Box>
