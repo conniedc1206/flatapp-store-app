@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom"
-import "./style.css";
+import { Link } from "react-router-dom";
+import "../style.css";
 
 function NavBar() {
   return (
     <nav>
-      <img src="../flatapplogo.png" className="nav--icon" />
+      <img src="logo" />
       <h1>FlatApp</h1>
-      <Link exact to="/">Store</Link>
+      <Link to="/">Store</Link>
       <Link to="/about">About</Link>
       <Link to="/seller">Seller</Link>
       <Link to="/blogs">Blogs</Link>
@@ -16,4 +16,4 @@ function NavBar() {
   );
 }
 
-export default NavBar
+export default NavBar;

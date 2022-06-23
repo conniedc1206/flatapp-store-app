@@ -1,8 +1,8 @@
-import ReactDOM from "react-dom";
 import { useState } from "react";
-import "./style.css";
+import { useHistory } from "react-router-dom";
+import "../style.css";
 
-function Seller({ onAddProject }) {
+function Seller() {
   const initialState = {
     appName: "",
     image: "",
@@ -15,6 +15,9 @@ function Seller({ onAddProject }) {
 
   const [formData, setFormData] = useState(initialState);
 
+  const history = useHistory();
+  //console.log(history);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
@@ -26,8 +29,6 @@ function Seller({ onAddProject }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const configObj = {
-      // fetch("http://localhost:3000/apps"), {
-
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,42 +37,40 @@ function Seller({ onAddProject }) {
       body: JSON.stringify({ ...formData, likes: 0 }),
     };
 
-    fetch("http://localhost:3000/apps", configObj)
-      .then((res) => res.json())
-      .then((project) => {
-        console.log(project);
-        setFormData({
-          appName: "",
-          image: "",
-          developerNames: "",
-          githubRepo: "",
-          appUrl: "",
-          about: "",
-          phase: "",
-        });
-        setFormData.reset();
-      });
+    fetch("http://localhost:3000/apps", configObj);
+    // .then((res) => res.json())
+    // .then((data) => console.log(data) );
+
+    history.push("/");
+
+    // setFormData({
+    //   appName: "",
+    //   image: "",
+    //   developerNames: "",
+    //   githubRepo: "",
+    //   appUrl: "",
+    //   about: "",
+    //   phase: "",
   };
 
   return (
     <div>
       <form id="form1" onSubmit={handleSubmit}>
-        <h1>Seller Account</h1>
-        <label htmlfor="creators">
-          Creators:<em> (ex. Connie, Mark, Samantha, Harrison)</em>
-        </label>
+        <h1>Seller Page</h1>
+        <p>Add information about your app here</p>
         <br></br>
+        <label htmlFor="developerNames">Developers:</label>
         <input
           type="text"
           name="developerNames"
           id="developerNames"
           onChange={handleChange}
           value={formData.developerNames}
+          placeholder="ex. Connie, Mark, Samantha, Harrison"
         />
         <br></br>
         <br></br>
-        <label htmlfor="appName">App Title:</label>
-        <br></br>
+        <label htmlFor="appName">App Title:</label>
         <input
           type="text"
           id="appName"
@@ -81,8 +80,7 @@ function Seller({ onAddProject }) {
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="appUrl">App URL:</label>
-        <br></br>
+        <label htmlFor="appUrl">App URL:</label>
         <input
           type="text"
           id="appUrl"
@@ -92,30 +90,28 @@ function Seller({ onAddProject }) {
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="developerGithub">GitHub URL:</label>
-        <br></br>
+        <label htmlFor="githubRepo">GitHub Repo URL:</label>
         <input
           type="text"
-          id="developerGitHub"
-          name="developerGitHub"
+          id="githubRepo"
+          name="githubRepo"
           onChange={handleChange}
           value={formData.githubRepo}
+          placeholder="https://github.com/user/project"
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="image">Image URL:</label>
-        <br></br>
+        <label htmlFor="image">Image URL:</label>
         <input
           type="text"
           id="image"
           name="image"
           onChange={handleChange}
-          value={formData.appUrl}
+          value={formData.image}
         ></input>
         <br></br>
         <br></br>
-        <label htmlfor="about">App Description:</label>
-        <br></br>
+        <label htmlFor="about">App Description:</label>
         <textarea
           id="about"
           name="about"
@@ -126,8 +122,7 @@ function Seller({ onAddProject }) {
         ></textarea>
         <br></br>
         <br></br>
-        <label htmlfor="phase">Phase:</label>
-        <br></br>
+        <label htmlFor="phase">Phase:</label>
         <select
           id="phase"
           name="phase"
