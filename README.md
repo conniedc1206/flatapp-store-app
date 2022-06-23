@@ -8,6 +8,8 @@ Users will be able to:
 
 Technologies used: Our frontend was built with React.js and communicates with our json-server in our backend 
 
+This project was created using [Create React App](https://create-react-app.dev/)
+
 Live Demo (link here)
 
 ## Goals
@@ -29,16 +31,27 @@ Our goal was to build an React application and simulate a professional work envi
 * corresponding data with our seller component: tested the controlled form using optimistic and pessimistic rendering
 * incorporating client-side routing: organizing our components with the routes from the very beginning
 
-## Installation
+## Avaliable Scripts
 
 Fork and clone [our frontend repository](https://github.com/conniedc1206/phase-2-project-frontend) onto your local environment:  
-Run `npm install`  
-Run `npm start` to start the server for your app (open in your browser using the local host link)
+In the project directory, install the dependencies by running:  
+`npm install`  
+
+In the project directory, you can run:  
+`npm start`  
+Runs the app in the development mode.  
+Open http://localhost:3001 to view it in your browser.  
+
 
 Fork and clone [our backend repository](https://github.com/conniedc1206/phase-2-project-backend) onto your local environment:  
-Run `npm install`  
-Run `npm run dev` to start the server for our backend data
+Install the dependencies by running:  
+`npm install`  
 
+To run your server in development mode, run:  
+`npm run dev`  
+While running in development mode, the server will re-load any time you make changes to the db.json file, so you can test our your seed data.  
+
+While your server is running, you can make requests to http://localhost:3000. Check it out in the browser to make sure your server works!  
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
