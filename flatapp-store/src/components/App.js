@@ -16,7 +16,7 @@ function App() {
   function handleSelectedApp(newSelectedAppState) {
     setSelectedApp(newSelectedAppState);
   }
-  //console.log(selectedApp);
+  // console.log(selectedApp);
 
   return (
     <div>

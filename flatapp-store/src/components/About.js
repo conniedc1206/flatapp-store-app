@@ -1,22 +1,34 @@
 import React from "react";
-import "../style.css"
+import { Link } from "react-router-dom"
+import { Box, Flex, Heading, Button } from "@chakra-ui/react"
+import { TiArrowBack } from "react-icons/ti";
 
 function About() {
   return (
-    <div id="about">
-      <h1 id="text-big">Welcome to FlatApp</h1>
-      <p id="text-small">
-        FlatApp is a place where you are able to pick, <br></br>view and
-        sell your fantastic items and gain experience<br></br> in other people's worlds in 
-        Software Development.
-      </p>
-      <br></br>
-      <p id="text-small">We're glad to have you here!</p>
-      <br></br>
-      <p id="text-small">Now, let's get exploring!</p>
-      <br></br>
-      <br></br>
-    </div>
+    <Flex justifyContent="center">
+      <Box 
+      textAlign="center"
+      backgroundColor="#00ACEE" 
+      marginTop="5%"
+      width="800px"
+      height="600px"
+      borderRadius="5%"
+      boxShadow="dark-lg" >
+        <Heading padding="2%" size="3xl">Welcome to FlatApp</Heading>
+        <Heading padding="2%" size="md">
+          FlatApp is a place where you are able to pick, <br></br>view and
+          sell your fantastic items and gain experience<br></br> in other people's worlds in 
+          Software Development.
+        </Heading>
+        <Heading size="md">We're glad to have you here!</Heading>
+        <Heading marginBottom="2%" size="md">Now, let's get exploring!</Heading>
+        <Link to="/"> 
+          <Button boxShadow='dark-lg' p='6' rounded='md' bg='white'>
+            <TiArrowBack color="#00ACEE"/>
+          </Button>
+        </Link> 
+      </Box>
+    </Flex>
   );
 }
 

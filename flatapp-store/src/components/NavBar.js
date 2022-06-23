@@ -1,21 +1,84 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as ReactLink } from "react-router-dom";
+import { Box, Image, Heading, Flex, Link } from "@chakra-ui/react"
 import "../style.css";
 import flatapplogo from "../flatapplogo.png";
 
 function NavBar() {
   return (
-    <nav>
-      <img src={flatapplogo} className="nav--icon" />
-      <h1>FlatApp</h1>
-      <Link exact to="/">
-        Store
-      </Link>
-      <Link to="/about">About</Link>
-      <Link to="/seller">Seller</Link>
-      <Link to="/blogs">Blogs</Link>
-      <Link to="/login">Login</Link>
-    </nav>
+    <Box
+    display="flex"
+    justifyContent="space-between"
+    backgroundColor="#00ACEE"
+    height="118px"
+    alignItems="center"
+    padding="30px 25px"
+    boxShadow="2xl" >
+      <Flex textAlign="center">
+        <Image src={flatapplogo} 
+        height="70px"
+        marginRight="7px"
+        borderRadius="25%"
+        />
+        <Heading size="3xl" padding="2%"
+        _hover={{
+          textDecoration: "none"
+        }}>FlatApp</Heading>
+      </Flex>
+      <Flex 
+      justifyContent="end" >
+        <ReactLink to="/">
+          <Link margin="1rem 1rem" 
+            textDecoration="none"
+            fontSize="18px"
+            borderBottom="1px solid white"
+            _hover={{
+              textDecoration: "none",
+              color: "white"
+            }}>Store</Link>
+        </ReactLink>
+        <ReactLink to="/about">
+          <Link margin="1rem 1rem" 
+          textDecoration="none"
+          fontSize="18px"
+          borderBottom="1px solid white"
+          _hover={{
+            textDecoration: "none",
+            color: "white"
+          }}>About</Link>
+        </ReactLink>
+        <ReactLink to="/seller">
+          <Link margin="1rem 1rem" 
+              textDecoration="none"
+              fontSize="18px"
+              borderBottom="1px solid white"
+              _hover={{
+                textDecoration: "none",
+                color: "white"
+              }}>Sell</Link>
+        </ReactLink>
+        <ReactLink to="/blogs">
+          <Link margin="1rem 1rem" 
+                textDecoration="none"
+                fontSize="18px"
+                borderBottom="1px solid white"
+                _hover={{
+                  textDecoration: "none",
+                  color: "white"
+                }}>Blogs</Link>
+        </ReactLink>
+        <ReactLink to="/login">
+          <Link margin="1rem 1rem" 
+                  textDecoration="none"
+                  fontSize="18px"
+                  borderBottom="1px solid white"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "white"
+                  }}>Login</Link>
+        </ReactLink>
+      </Flex>
+    </Box>
   );
 }
 
