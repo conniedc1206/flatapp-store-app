@@ -15,8 +15,8 @@ Live Demo (link here)
 ## Goals
 Our goal was to build an React application and simulate a professional work environment:
 * plan out your wireframes and features
-* pitched our app in a project proposal
-* use Github for our version control workflow
+* pitch our app in a project proposal
+* use Git/Github for our source control system to track code changes and collaborate with team
 * create a json-server to create a RESTful API and make both a GET and a POST request
 * utilize UI for our CSS styling
 
