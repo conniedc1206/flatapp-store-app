@@ -31,11 +31,11 @@ Our goal was to build an React application and simulate a professional work envi
 
 ## Installation
 
-Fork and clone this frontend repository onto your local environment: 
-Run `npm install`.
+Fork and clone this frontend repository onto your local environment:  
+Run `npm install`.  
 Run `npm start` to start the server for your app (open in your browser using the local host link)
 
-Fork and clone this backend repository onto your local environment:
+Fork and clone this backend repository onto your local environment:  
 Run `npm install`.  
 Run `npm run dev` to start the server for our backend data
 
@@ -45,7 +45,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Creators
 ---
-Samantha Navarro [Github](https://github.com/samantha-navarro)  [Linkedin](https://www.linkedin.com/in/samantha-navarro8/)
-Connie Park [Github](https://github.com/conniedc1206)  [Linkedin](https://www.linkedin.com/in/conniepark2)
-Mark Reese [Github](https://github.com/marksreese)  [Linkedin](https://www.linkedin.com/in/mark-s-reese/)
-Harrison Sabean [Github](https://github.com/Hsabes)  [Linkedin](https://www.linkedin.com/in/harrison-sabean/)
+Samantha Navarro [Github](https://github.com/samantha-navarro)  [Linkedin](https://www.linkedin.com/in/samantha-navarro8/)  
+Connie Park [Github](https://github.com/conniedc1206)  [Linkedin](https://www.linkedin.com/in/conniepark2)  
+Mark Reese [Github](https://github.com/marksreese)  [Linkedin](https://www.linkedin.com/in/mark-s-reese/)  
+Harrison Sabean [Github](https://github.com/Hsabes)  [Linkedin](https://www.linkedin.com/in/harrison-sabean/)  
