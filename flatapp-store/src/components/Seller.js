@@ -1,5 +1,5 @@
-import ReactDOM from "react-dom";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../style.css";
 
 function Seller() {
@@ -15,47 +15,51 @@ function Seller() {
 
   const [formData, setFormData] = useState(initialState);
 
+  const history = useHistory();
+  //console.log(history);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
 
-    console.log(formData)
-    console.log(e.target.value)
+    //console.log(formData);
+    //console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const configObj = {  
+    const configObj = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify({ ...formData, likes: 0 }),
     };
 
-    fetch("http://localhost:3000/apps", configObj)
-      // .then((res) => res.json())
-      // .then((project) => 
-      //   console.log(project));
+    fetch("http://localhost:3000/apps", configObj);
+    // .then((res) => res.json())
+    // .then((data) => console.log(data) );
 
-    setFormData({
-      appName: "",
-      image: "",
-      developerNames: "",
-      githubRepo: "",
-      appUrl: "",
-      about: "",
-      phase: "",
-    });
+    history.push("/");
+
+    // setFormData({
+    //   appName: "",
+    //   image: "",
+    //   developerNames: "",
+    //   githubRepo: "",
+    //   appUrl: "",
+    //   about: "",
+    //   phase: "",
   };
 
   return (
     <div>
       <form id="form1" onSubmit={handleSubmit}>
-        <h1>Seller Account</h1>
-        <label htmlFor="developerNames">Developers:</label>
+        <h1>Seller Page</h1>
+        <p>Add information about your app here</p>
         <br></br>
+        <label htmlFor="developerNames">Developers:</label>
         <input
           type="text"
           name="developerNames"
@@ -67,7 +71,6 @@ function Seller() {
         <br></br>
         <br></br>
         <label htmlFor="appName">App Title:</label>
-        <br></br>
         <input
           type="text"
           id="appName"
@@ -78,7 +81,6 @@ function Seller() {
         <br></br>
         <br></br>
         <label htmlFor="appUrl">App URL:</label>
-        <br></br>
         <input
           type="text"
           id="appUrl"
@@ -89,7 +91,6 @@ function Seller() {
         <br></br>
         <br></br>
         <label htmlFor="githubRepo">GitHub Repo URL:</label>
-        <br></br>
         <input
           type="text"
           id="githubRepo"
@@ -101,7 +102,6 @@ function Seller() {
         <br></br>
         <br></br>
         <label htmlFor="image">Image URL:</label>
-        <br></br>
         <input
           type="text"
           id="image"
@@ -112,7 +112,6 @@ function Seller() {
         <br></br>
         <br></br>
         <label htmlFor="about">App Description:</label>
-        <br></br>
         <textarea
           id="about"
           name="about"
@@ -124,7 +123,6 @@ function Seller() {
         <br></br>
         <br></br>
         <label htmlFor="phase">Phase:</label>
-        <br></br>
         <select
           id="phase"
           name="phase"

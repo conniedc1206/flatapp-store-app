@@ -1,38 +1,53 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react"
-import { useParams } from "react-router-dom"
+import { Box, Flex } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { FaRegThumbsUp } from "react-icons/fa";
+import { BsCartPlus } from "react-icons/bs";
+import { TiArrowBack } from "react-icons/ti";
 
-function ItemDetails({ app }) {
+function ItemDetails({ selectedApp }) {
+  // const { id } = useParams();
 
-  const { id } = useParams();
+  //console.log(selectedApp);
 
-  console.log(app);
   return (
     <div>
-      <div key={app.id}>
-        
+      <div key={selectedApp.id}>
         <div>
-          <img alt={app.appName} src={app.image} style={{ width: "50%" }} />
+          <img
+            alt={selectedApp.appName}
+            src={selectedApp.image}
+            style={{ width: "50%" }}
+          />
         </div>
 
         <div>
-          <h1>{app.appName}</h1>
-          <p>Developers: {app.developerNames}</p>
-          <p>About: {app.about}</p>
-          
-          <a href={app.githubRepo}>Github Repo</a>
+          <h1>{selectedApp.appName}</h1>
+          <p>Developers: {selectedApp.developerNames}</p>
+          <p>About: {selectedApp.about}</p>
+
+          <a href={selectedApp.githubRepo}>Github Repo</a>
           <br></br>
-          <a href={app.appUrl}>Live Demo</a>
+          <a href={selectedApp.appUrl}>Live Demo</a>
         </div>
 
         <div>
           <span>
-            <button>Add To Cart</button>
+            <Link to="/">
+              <button>
+                <TiArrowBack />
+              </button>
+            </Link>
             <br></br>
-            <button>Go Back</button>
+            <button>
+              <BsCartPlus />
+            </button>
+            <br></br>
+            <button>
+              <FaRegThumbsUp />
+            </button>
           </span>
         </div>
-
       </div>
     </div>
   );
