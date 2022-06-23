@@ -4,7 +4,7 @@ import Seller from "./Seller";
 import Login from "./Login";
 import NavBar from "./NavBar";
 // import Blogs from "./Blogs"
-// import Cart from "./Cart"
+import Cart from "./Cart"
 import MainContainer from "./MainContainer";
 import { useState } from "react";
 import ItemDetails from "./ItemDetails";
@@ -12,11 +12,27 @@ import ItemDetails from "./ItemDetails";
 function App() {
   const [apps, setApps] = useState([]);
   const [selectedApp, setSelectedApp] = useState(null);
+  const [cartApps, setCartApps] = useState([])
 
   function handleSelectedApp(newSelectedAppState) {
     setSelectedApp(newSelectedAppState);
   }
-  //console.log(selectedApp);
+  // console.log(selectedApp);
+
+  const handleAddToCart = (appToAdd) => {
+    //check if it's not in cart already
+    //update cartApps state
+    const isInCart = cartApps.some((app) => app.id === appToAdd.id);
+    if (!isInCart) {
+      setCartApps((currentCart) => [...currentCart, appToAdd]);
+    }
+  }
+
+  function handleRemoveFromCart(appToRemove) {
+    setCartApps((currentCart) =>
+    currentCart.filter((app) => app.id !== appToRemove.id)
+    );
+  }
 
   return (
     <div>
@@ -34,9 +50,9 @@ function App() {
         {/* <Route path="/blogs">
           <Blogs />
         </Route> */}
-        {/* <Route path="/cart">
-          <Cart />
-        </Route> */}
+        <Route path="/cart">
+          <Cart cartApps={cartApps} handleRemoveFromCart={handleRemoveFromCart}/>
+        </Route>
         <Route exact path="/">
           <MainContainer
             apps={apps}
@@ -45,7 +61,7 @@ function App() {
           />
         </Route>
         <Route path="/details/:id">
-          <ItemDetails selectedApp={selectedApp} />
+          <ItemDetails selectedApp={selectedApp} handleAddToCart={handleAddToCart}/>
         </Route>
       </Switch>
     </div>

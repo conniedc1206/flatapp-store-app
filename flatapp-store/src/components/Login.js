@@ -36,7 +36,9 @@ function Login() {
         <br></br>
         {/* <label htmlFor="name">Newsletter</label>
                 <input type="checkbox" id="newsletter" value="newsletter"/> */}
-        <Button id="submit" type="submit" colorScheme="blue">
+        <Button id="submit" 
+        type="submit"
+        colorScheme="twitter" >
           Login
         </Button>
       </form>
