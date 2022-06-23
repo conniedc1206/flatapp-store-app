@@ -1,6 +1,6 @@
-import React from "react";
-import AppItem from "./AppItem";
-import { Box, Flex } from "@chakra-ui/react";
+import React from 'react'
+import AppItem from './AppItem'
+import { Flex } from "@chakra-ui/react"
 
 function FilteredList({ apps, phase, handleSelectedApp }) {
   const filteredApps = apps.filter((app) => app.phase === phase);
