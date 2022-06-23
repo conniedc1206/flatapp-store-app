@@ -3,7 +3,7 @@ import About from "./About";
 import Seller from "./Seller";
 import Login from "./Login";
 import NavBar from "./NavBar";
-// import Blogs from "./Blogs"
+import Blogs from "./Blogs"
 import Cart from "./Cart"
 import MainContainer from "./MainContainer";
 import { useState } from "react";
@@ -47,9 +47,9 @@ function App() {
         <Route path="/seller">
           <Seller />
         </Route>
-        {/* <Route path="/blogs">
+        <Route path="/blogs">
           <Blogs />
-        </Route> */}
+        </Route>
         <Route path="/cart">
           <Cart cartApps={cartApps} handleRemoveFromCart={handleRemoveFromCart}/>
         </Route>

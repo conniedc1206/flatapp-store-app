@@ -1,5 +1,15 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Flex, 
+  Box, 
+  FormControl, 
+  FormLabel, 
+  Input, 
+  Heading, 
+  Textarea,
+  Select,
+  Button 
+} from "@chakra-ui/react"
 import "../style.css";
 
 function Seller() {
@@ -54,94 +64,108 @@ function Seller() {
   };
 
   return (
-    <div>
-      <form id="form1" onSubmit={handleSubmit}>
-        <h1>Seller Page</h1>
-        <p>Add information about your app here</p>
-        <br></br>
-        <label htmlFor="developerNames">Developers:</label>
-        <input
-          type="text"
-          name="developerNames"
-          id="developerNames"
-          onChange={handleChange}
-          value={formData.developerNames}
-          placeholder="ex. Connie, Mark, Samantha, Harrison"
-        />
-        <br></br>
-        <br></br>
-        <label htmlFor="appName">App Title:</label>
-        <input
-          type="text"
-          id="appName"
-          name="appName"
-          onChange={handleChange}
-          value={formData.appName}
-        ></input>
-        <br></br>
-        <br></br>
-        <label htmlFor="appUrl">App URL:</label>
-        <input
-          type="text"
-          id="appUrl"
-          name="appUrl"
-          onChange={handleChange}
-          value={formData.appUrl}
-        ></input>
-        <br></br>
-        <br></br>
-        <label htmlFor="githubRepo">GitHub Repo URL:</label>
-        <input
-          type="text"
-          id="githubRepo"
-          name="githubRepo"
-          onChange={handleChange}
-          value={formData.githubRepo}
-          placeholder="https://github.com/user/project"
-        ></input>
-        <br></br>
-        <br></br>
-        <label htmlFor="image">Image URL:</label>
-        <input
-          type="text"
-          id="image"
-          name="image"
-          onChange={handleChange}
-          value={formData.image}
-        ></input>
-        <br></br>
-        <br></br>
-        <label htmlFor="about">App Description:</label>
-        <textarea
-          id="about"
-          name="about"
-          onChange={handleChange}
-          value={formData.about}
-          rows="5"
-          cols="40"
-        ></textarea>
-        <br></br>
-        <br></br>
-        <label htmlFor="phase">Phase:</label>
-        <select
-          id="phase"
-          name="phase"
-          onChange={handleChange}
-          value={formData.phase}
-        >
-          <option value="1">Phase 1</option>
-          <option value="2">Phase 2</option>
-          <option value="3">Phase 3</option>
-          <option value="4">Phase 4</option>
-          <option value="5">Phase 5</option>
-        </select>
-        <br></br>
-        <br></br>
-
-        <input id="submit" type="submit" value="Submit"></input>
-      </form>
-    </div>
+     <Flex justifyContent="center">
+      <Box marginTop="5%"
+      marginBottom="5%"
+      border="1px solid lightgrey"
+      borderRadius="10%"
+      padding="5%">
+        <FormControl id="form1" onSubmit={handleSubmit}>
+          <Heading size="lg">Seller Page</Heading>
+          <Heading size="sm">Add information about your app here</Heading>
+          <br></br>
+          <FormLabel htmlFor="developerNames">Developers:</FormLabel>
+          <Input
+            type="text"
+            name="developerNames"
+            id="developerNames"
+            onChange={handleChange}
+            value={formData.developerNames}
+            placeholder="ex. Connie, Mark, Samantha, Harrison"
+          />
+          <br></br>
+          <br></br>
+          <FormLabel htmlFor="appName">App Title:</FormLabel>
+          <Input
+            type="text"
+            id="appName"
+            name="appName"
+            onChange={handleChange}
+            value={formData.appName}
+          />
+          <br></br>
+          <br></br>
+          <FormLabel htmlFor="appUrl">App URL:</FormLabel>
+          <Input
+            type="text"
+            id="appUrl"
+            name="appUrl"
+            onChange={handleChange}
+            value={formData.appUrl}
+          />
+          <br></br>
+          <br></br>
+          <FormLabel htmlFor="githubRepo">GitHub Repo URL:</FormLabel>
+          <Input
+            type="text"
+            id="githubRepo"
+            name="githubRepo"
+            onChange={handleChange}
+            value={formData.githubRepo}
+            placeholder="https://github.com/user/project"
+          />
+          <br></br>
+          <br></br>
+          <FormLabel htmlFor="image">Image URL:</FormLabel>
+          <Input
+            type="text"
+            id="image"
+            name="image"
+            onChange={handleChange}
+            value={formData.image}
+            placeholder="https://imgur.com/t/funny_cat"
+          />
+          <br></br>
+          <br></br>
+          <FormLabel htmlFor="about">App Description:</FormLabel>
+          <Textarea
+            id="about"
+            name="about"
+            onChange={handleChange}
+            value={formData.about}
+            rows="5"
+            cols="40"
+          />
+          <br></br>
+          <br></br>
+          <FormLabel htmlFor="phase">Phase:</FormLabel>
+          <Select
+            id="phase"
+            name="phase"
+            onChange={handleChange}
+            value={formData.phase}
+          >
+            <option value="1">Phase 1</option>
+            <option value="2">Phase 2</option>
+            <option value="3">Phase 3</option>
+            <option value="4">Phase 4</option>
+            <option value="5">Phase 5</option>
+          </Select>
+          <br></br>
+          <br></br>
+          <Flex justifyContent="center">
+            <Button id="submit" 
+            type="submit" 
+            value="Submit"
+            colorScheme="twitter"
+            width="75%"
+            >Submit</Button>
+          </Flex>
+        </FormControl>
+      </Box>
+    </Flex> 
   );
 }
 
 export default Seller;
+
