@@ -4,9 +4,8 @@ import FilteredList from './FilteredList'
 import FilterBar from './FilterBar'
 import SearchBar from './SearchBar'
 
-function MainContainer() {
+function MainContainer({ apps, setApps }) {
 
-    const [apps, setApps] = useState([])
     const [phase, setPhase] = useState("1")
     const [search, setSearch] = useState("")
     

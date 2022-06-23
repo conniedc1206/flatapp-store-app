@@ -1,15 +1,11 @@
 import React from 'react'
 import { Box } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 
 function ProjectItem({ app }) {
    
-    const { appName, phase, likes } = app;
+    const { appName, phase, likes, id } = app;
     let { image } = app;
-  
-    const handleClick = () => {
-        console.log('hello world');
-        //this should link to details page of corresponding project
-    }
 
     //iterates through all creators and puts commas between their names
     // let authors = "";
@@ -21,26 +17,29 @@ function ProjectItem({ app }) {
     // }
 
     return (
-    <Box
-    onClick={handleClick}
-    borderWidth="2px"
-    width="200px"
-    height="150px"
-    borderRadius="lg"
-    textAlign="center"
-    overflow="hidden" 
-    margin="5px"
-    cursor="pointer" 
-    _hover={{
-        background:"lightGrey",
-        borderColor:"darkGrey",
-        transition:"0.2s"
-    }} >
-        <img src={image} alt={appName} height="40%" width="25%" />
-        <b > {appName}</b>
-        <p>Phase: {phase}</p>
-        <em>{likes} likes</em>
-    </Box>
+        <Box
+        borderWidth="2px"
+        width="200px"
+        height="150px"
+        borderRadius="lg"
+        textAlign="center"
+        overflow="hidden" 
+        margin="5px"
+        cursor="pointer" 
+        _hover={{
+            background:"lightGrey",
+            borderColor:"darkGrey",
+            transition:"0.2s"
+        }} >
+            <Link to={`/details/${id}`} >
+                <Box height="100%">
+                    <img src={image} alt={appName} height="40%" width="25%" />
+                    <b > {appName}</b>
+                    <p>Phase: {phase}</p>
+                    <em>{likes} likes</em>
+                </Box>
+            </Link>
+        </Box>
   )
 }
 
