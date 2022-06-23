@@ -1,0 +1,152 @@
+/* NAVBAR */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Piazzolla", serif;
+  font-size: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: rgb(18, 179, 233);
+  height: 90 px;
+  padding: 30px 25px;
+  font-family: Inter, sans-serif;
+  opacity: 85%
+}
+
+.nav--icon {
+  height: 40px;
+  margin-right: 7px;
+  border-radius: 25%;
+  /* border: 1px solid black; */
+}
+
+nav > h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+nav > h1 {
+  margin-right: auto;
+  color: black;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+nav > a {
+  display: inline-block;
+  margin: 1rem 1rem;
+  text-decoration: none;
+  font-size: 15px;
+  color: blrgb(12, 22, 26);;
+  border-bottom: 1px solid white;
+  transition: 0.1s;
+}
+
+/* ABOUT */
+
+#about {
+  background: gray;
+  background-blend-mode: harden;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  opacity: 80%
+}
+
+#text-big {
+  margin: 100px;
+  font-family: "Piazzolla", serif;
+  background-color: grey;
+  font-weight: bold;
+  font-size: 41px;
+  text-align: center;
+}
+
+#text-small {
+  font-family: "Piazzolla", serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* SELLER */
+
+form {
+  background: white;
+  border: 1px solid #dede;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 30px 50px;
+}
+
+input {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+form > h1 {
+  border-bottom: 1px solid white;
+  color: #3d3d3d;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+form > label {
+  color: #3d3d3d;
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#submit {
+  background-color: gainsboro;
+  color: black;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 20px 0px;
+}
+
+/* LOGIN */
+
+.login {
+  margin: 100px;
+}
+
+
+/* nav {
+    height: 70px;
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.nav--logo {
+    max-width: 100px;
+}
+
+nav a {
+        display: inline-block;
+        margin: 1rem 2rem;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: firebrick;
+        border-bottom: 2px solid firebrick;
+        transition: 0.1s;
+      /* } */
