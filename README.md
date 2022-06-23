@@ -31,11 +31,11 @@ Our goal was to build an React application and simulate a professional work envi
 
 ## Installation
 
-Fork and clone this frontend repository onto your local environment:  
+Fork and clone [our frontend repository](https://github.com/conniedc1206/phase-2-project-frontend) onto your local environment:  
 Run `npm install`.  
 Run `npm start` to start the server for your app (open in your browser using the local host link)
 
-Fork and clone this backend repository onto your local environment:  
+Fork and clone [our backend repository](https://github.com/conniedc1206/phase-2-project-backend) onto your local environment:  
 Run `npm install`.  
 Run `npm run dev` to start the server for our backend data
 
