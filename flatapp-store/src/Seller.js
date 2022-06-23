@@ -19,19 +19,19 @@ function Seller({ onAddProject }) {
     const { name, value } = e.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
 
-    console.log(formData)
-    console.log(e.target.value)
+    console.log(formData);
+    console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const configObj = {
-    // fetch("http://localhost:3000/apps"), {
-    
+      // fetch("http://localhost:3000/apps"), {
+
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify({ ...formData, likes: 0 }),
     };
@@ -49,7 +49,7 @@ function Seller({ onAddProject }) {
           about: "",
           phase: "",
         });
-        setFormData.reset()
+        setFormData.reset();
       });
   };
 
@@ -57,7 +57,9 @@ function Seller({ onAddProject }) {
     <div>
       <form id="form1" onSubmit={handleSubmit}>
         <h1>Seller Account</h1>
-        <label htmlfor="creators">Creators:<em> (ex. Connie, Mark, Samantha, Harrison)</em></label>
+        <label htmlfor="creators">
+          Creators:<em> (ex. Connie, Mark, Samantha, Harrison)</em>
+        </label>
         <br></br>
         <input
           type="text"
@@ -97,7 +99,7 @@ function Seller({ onAddProject }) {
           id="developerGitHub"
           name="developerGitHub"
           onChange={handleChange}
-          value={formData.developerGithub}
+          value={formData.githubRepo}
         ></input>
         <br></br>
         <br></br>
@@ -108,7 +110,7 @@ function Seller({ onAddProject }) {
           id="image"
           name="image"
           onChange={handleChange}
-          value={formData.developerLinkedIn}
+          value={formData.appUrl}
         ></input>
         <br></br>
         <br></br>
