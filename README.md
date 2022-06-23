@@ -23,7 +23,7 @@ Our goal was to build an React application and simulate a professional work envi
 * we created use a controlled form to make our POST request to our json-server
 * we rendered developers' apps onto our store page using array filter method and GET requests from our json-server
 * we organized our code into purposeful components in order to keep it clean and dry
-* we incorporated a UI framework for our styling with Chakra UI (https://chakra-ui.com/)
+* we incorporated a UI framework for our styling with [Chakra UI](https://chakra-ui.com/)
 
 ## Challenges/Future Improvements
 * corresponding data with our seller component: tested the controlled form using optimistic and pessimistic rendering
@@ -32,11 +32,11 @@ Our goal was to build an React application and simulate a professional work envi
 ## Installation
 
 Fork and clone [our frontend repository](https://github.com/conniedc1206/phase-2-project-frontend) onto your local environment:  
-Run `npm install`.  
+Run `npm install`  
 Run `npm start` to start the server for your app (open in your browser using the local host link)
 
 Fork and clone [our backend repository](https://github.com/conniedc1206/phase-2-project-backend) onto your local environment:  
-Run `npm install`.  
+Run `npm install`  
 Run `npm run dev` to start the server for our backend data
 
 
