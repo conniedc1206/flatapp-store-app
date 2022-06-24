@@ -60,7 +60,7 @@ function App() {
           />
         </Route>
         <Route path="/details/:id">
-          <ItemDetails selectedApp={selectedApp} handleAddToCart={handleAddToCart}/>
+          <ItemDetails selectedApp={selectedApp} handleAddToCart={handleAddToCart} apps={apps} setApps={setApps}/>
         </Route>
       </Switch>
     </div>

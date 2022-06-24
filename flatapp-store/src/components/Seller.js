@@ -9,7 +9,8 @@ import {
   Heading, 
   Textarea,
   Select,
-  Button 
+  Button, 
+  FormHelperText 
 } from "@chakra-ui/react"
 import "../style.css"
 
@@ -65,7 +66,7 @@ function Seller() {
       borderRadius="2xl"
       padding="5%" >
         <FormControl id="form1" >
-          <Heading size="lg" >Seller Page</Heading>
+          <Heading size="lg" >Developer Page</Heading>
           <Heading size="sm"
           marginTop="2%" >
             Add information about your app here
@@ -123,6 +124,7 @@ function Seller() {
             value={formData.image}
             placeholder="https://imgur.com/t/funny_cat"
           />
+          <FormHelperText>If you don't have an image Url, leave this field empty</FormHelperText>
           <br></br>
           <br></br>
           <FormLabel htmlFor="about">App Description:</FormLabel>
