@@ -170,6 +170,21 @@ function Blogs() {
                 <img src="https://i.imgur.com/yixQn8K.png" alt="Forest" width="600" height="400" />
                 </a>
             </Flex>
+        <br></br>
+            <Flex border="1px solid lightgrey"
+            margin="2%"
+            justifyContent="center"
+            _hover={{
+                boxShadow: "dark-lg",
+                transition: ".5s"
+            }}>
+                <a
+                target="_blank"
+                href="https://dev.to/kiranphillips/basic-understanding-of-functions-367d"
+                >
+                <img src="https://i.imgur.com/AAfasVN.png" alt="Forest" width="600" height="400" />
+                </a>
+            </Flex>
         </Box>
     </Flex>
   );

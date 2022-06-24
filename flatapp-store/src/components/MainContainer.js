@@ -18,7 +18,7 @@ function MainContainer({ apps, setApps, handleSelectedApp }) {
   return (
     <Box textAlign="center" >
       <SearchBar setSearch={setSearch} search={search} />
-      <Heading size="sm">Recommended Apps</Heading>
+      <Heading size="sm">Featured Apps</Heading>
       <RecommendedList
         apps={apps}
         search={search}
