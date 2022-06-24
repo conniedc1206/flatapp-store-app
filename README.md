@@ -7,6 +7,7 @@ Users will be able to:
 * Browse and search for cool SPAs by up-and-coming developers from Flatiron
 * See detailed view of each app
 * Save apps to a cart
+* Add a "like" to an app of their liking
 * Developers can upload their projects permanently to the platform using our “sellers” page
 
 Technologies used: Our frontend was built with React.js and communicates with our json-server in our backend 
@@ -24,6 +25,7 @@ Our goal was to build an React application and simulate a professional work envi
 ## Accomplishments
 * we were able to create 6 client-side routes using React Router in our nav bar/other UI element that allows users to navigate between routes
 * we created use a controlled form to make our POST request to our json-server
+* we used PATCH request to our json-server to persist the like counts
 * we rendered developers' apps onto our store page using array filter method and GET requests from our json-server
 * we organized our code into purposeful components in order to keep it clean and dry
 * we incorporated a UI framework for our styling with [Chakra UI](https://chakra-ui.com/)
