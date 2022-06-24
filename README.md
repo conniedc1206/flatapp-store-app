@@ -1,4 +1,6 @@
 # FlatApp Store
+![FlatApp Store](https://i.imgur.com/AxoSr1V.png)
+
 FlatApp Store is an e-commerce platform designed to showcase single-page apps created by members of Flatiron “Stranger Strings” cohort, as well as other Flatiron students.
 
 Users will be able to:
@@ -10,8 +12,6 @@ Users will be able to:
 Technologies used: Our frontend was built with React.js and communicates with our json-server in our backend 
 
 This project was created using [Create React App](https://create-react-app.dev/)
-
-Live Demo (link here)
 
 ## Goals
 Our goal was to build an React application and simulate a professional work environment:
