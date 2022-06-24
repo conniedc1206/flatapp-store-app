@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { Flex, 
+import { useState } from "react"
+import { useHistory } from "react-router-dom"
+import { 
+  Flex, 
   Box, 
   FormControl, 
   FormLabel, 
@@ -10,73 +11,70 @@ import { Flex,
   Select,
   Button 
 } from "@chakra-ui/react"
-import "../style.css";
+import "../style.css"
 
 function Seller() {
-  const initialState = {
+
+  const initialForm = {
     appName: "",
     image: "",
     developerNames: "",
     githubRepo: "",
     appUrl: "",
     about: "",
-    phase: "",
-  };
+    phase: "1",
+}
 
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState(initialForm)
 
-  const history = useHistory();
-  //console.log(history);
+  const history = useHistory()
+  //console.log(history)
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((formData) => ({ ...formData, [name]: value }));
-
-    //console.log(formData);
-    //console.log(e.target.value);
+    const { name, value } = e.target
+    setFormData(formData => ({ ...formData, [name]: value }))
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
+
     const configObj = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        Accept: "application/json"
       },
       body: JSON.stringify({ ...formData, likes: 0 }),
-    };
+    }
 
-    fetch("http://localhost:3000/apps", configObj);
+    fetch("http://localhost:3000/apps", configObj)
     // .then((res) => res.json())
     // .then((data) => console.log(data) );
 
-    history.push("/");
+    //should this push /seller?
+    // history.push("/");
 
-    // setFormData({
-    //   appName: "",
-    //   image: "",
-    //   developerNames: "",
-    //   githubRepo: "",
-    //   appUrl: "",
-    //   about: "",
-    //   phase: "",
-  };
+    setFormData(initialForm)
+  }
 
   return (
-     <Flex justifyContent="center">
+     <Flex justifyContent="center" >
       <Box marginTop="5%"
       marginBottom="5%"
       border="1px solid lightgrey"
-      borderRadius="10%"
-      padding="5%">
-        <FormControl id="form1" onSubmit={handleSubmit}>
-          <Heading size="lg">Seller Page</Heading>
-          <Heading size="sm">Add information about your app here</Heading>
-          <br></br>
-          <FormLabel htmlFor="developerNames">Developers:</FormLabel>
-          <Input
-            type="text"
+      borderRadius="2xl"
+      padding="5%" >
+        <FormControl id="form1" >
+          <Heading size="lg" >Seller Page</Heading>
+          <Heading size="sm"
+          marginTop="2%" >
+            Add information about your app here
+          </Heading>
+          <FormLabel htmlFor="developerNames"
+          marginTop="5%" >
+            Developers:
+          </FormLabel>
+          <Input type="text"
             name="developerNames"
             id="developerNames"
             onChange={handleChange}
@@ -138,13 +136,12 @@ function Seller() {
           />
           <br></br>
           <br></br>
-          <FormLabel htmlFor="phase">Phase:</FormLabel>
+          <FormLabel htmlFor="phase" >Phase:</FormLabel>
           <Select
             id="phase"
             name="phase"
             onChange={handleChange}
-            value={formData.phase}
-          >
+            value={formData.phase} >
             <option value="1">Phase 1</option>
             <option value="2">Phase 2</option>
             <option value="3">Phase 3</option>
@@ -153,12 +150,12 @@ function Seller() {
           </Select>
           <br></br>
           <br></br>
-          <Flex justifyContent="center">
-            <Button id="submit" 
-            type="submit" 
+          <Flex justifyContent="center" >
+            <Button id="submit"
             value="Submit"
             colorScheme="twitter"
             width="75%"
+            onClick={handleSubmit}
             >Submit</Button>
           </Flex>
         </FormControl>

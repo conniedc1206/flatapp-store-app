@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from "react"
 import { 
   Box,
   Flex,
@@ -14,23 +13,18 @@ import {
   PopoverBody,
   PopoverArrow,
   PopoverCloseButton,
-} from "@chakra-ui/react";
-
-import { Link as ReactLink } from "react-router-dom";
-
-import { FaRegThumbsUp } from "react-icons/fa";
-import { BsCartPlus } from "react-icons/bs";
-import { TiArrowBack } from "react-icons/ti";
+} from "@chakra-ui/react"
+import { Link as ReactLink } from "react-router-dom"
+import { FaRegThumbsUp } from "react-icons/fa"
+import { BsCartPlus } from "react-icons/bs"
+import { TiArrowBack } from "react-icons/ti"
 
 function ItemDetails({ selectedApp, handleAddToCart }) {
   // const { id } = useParams();
 
-  //console.log(selectedApp);
-
   const addToCart = () => {
-    handleAddToCart(selectedApp);
-  };
-
+    handleAddToCart(selectedApp)
+  }
 
   return (
     <Box 
@@ -42,7 +36,9 @@ function ItemDetails({ selectedApp, handleAddToCart }) {
       marginTop="1%" >
         <Heading 
         textDecoration="underline"
-        marginBottom=".5%" >{selectedApp.appName}</Heading>
+        marginBottom=".5%" >
+          {selectedApp.appName}
+        </Heading>
         <p>Developers: {selectedApp.developerNames}</p>
         <Flex
         justifyContent="center"
@@ -59,9 +55,21 @@ function ItemDetails({ selectedApp, handleAddToCart }) {
           textAlign="center"
           maxWidth="600px" >
             <p>About: {selectedApp.about}</p>
-            <Link textDecoration="underline" color="blue" href={selectedApp.githubRepo}>Github Repo</Link>
+            <Link textDecoration="underline"
+            color="blue"
+            href={selectedApp.githubRepo} 
+            target="_blank"
+            rel="noreferrer noopener" >
+              Github Repo
+            </Link>
             <br></br>
-            <Link textDecoration="underline" color="blue" href={selectedApp.appUrl}>Live Demo</Link>
+            <Link textDecoration="underline"
+            color="blue"
+            href={selectedApp.appUrl}
+            target="_blank"
+            rel="noreferrer noopener" >
+              Live Demo
+            </Link>
           </Box>
         </Flex>
         <Flex justifyContent="center" 
