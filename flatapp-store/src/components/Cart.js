@@ -1,5 +1,7 @@
 import React from "react";
 import CartItem from "./CartItem";
+import { Box, Flex } from "@chakra-ui/react"
+
 
 function Cart({ cartApps, handleRemoveFromCart}) {
   console.log(cartApps);
@@ -12,7 +14,9 @@ function Cart({ cartApps, handleRemoveFromCart}) {
     />
   ));
 
-  return <div>{renderCartItems}</div>;
+  return (
+      <Flex alignItems="center" flexDirection="column">{renderCartItems}</Flex>
+  )
 }
 
 export default Cart;
