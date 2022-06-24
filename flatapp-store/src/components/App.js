@@ -17,20 +17,19 @@ function App() {
   function handleSelectedApp(newSelectedAppState) {
     setSelectedApp(newSelectedAppState);
   }
-  // console.log(selectedApp);
 
   const handleAddToCart = (appToAdd) => {
     //check if it's not in cart already
     //update cartApps state
-    const isInCart = cartApps.some((app) => app.id === appToAdd.id);
+    const isInCart = cartApps.some(app => app.id === appToAdd.id);
     if (!isInCart) {
-      setCartApps((currentCart) => [...currentCart, appToAdd]);
+      setCartApps(currentCart => [...currentCart, appToAdd]);
     }
   }
 
   function handleRemoveFromCart(appToRemove) {
     setCartApps((currentCart) =>
-    currentCart.filter((app) => app.id !== appToRemove.id)
+    currentCart.filter(app => app.id !== appToRemove.id)
     );
   }
 

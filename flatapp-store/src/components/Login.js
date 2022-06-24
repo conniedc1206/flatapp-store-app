@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import { Button, Box, Flex, FormControl, FormLabel, Input, Heading } from "@chakra-ui/react"
 
 function Login() {
@@ -7,46 +7,50 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setLog.reset();
+    e.preventDefault()
+    setPassword("")
+    setLog("")
   };
 
   return (
-    <Flex justifyContent="center">
+    <Flex justifyContent="center" >
       <Box marginTop="5%"
       border="1px solid lightgrey"
       borderRadius="10%"
       padding="5%"
-      bgColor="white">
+      bgColor="white" >
         <FormControl>
-          <Heading size="sm">Login</Heading>
-          <FormLabel htmlFor="name">UserName</FormLabel>
+          <Heading
+          size="sm"
+          marginBottom="10%" >
+            Login
+          </Heading>
+          <FormLabel htmlFor="name" >UserName</FormLabel>
           <Input
             type="text"
             id="name"
-            onChange={(e) => setLog(e.target.value)}
+            onChange={e => setLog(e.target.value)}
             value={log}
+            marginBottom="1%"
           />
-          <br></br>
-          <br></br>
-          <FormLabel htmlFor="user-password">Password</FormLabel>
+          <FormLabel htmlFor="user-password" >Password</FormLabel>
           <Input
             type="password"
             id="user-password"
             name="user-password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
             value={password}
+            marginBottom="10%"
           />
-          <br></br>
-          <br></br>
-          <Flex justifyContent="center">
-            <Button id="submit" 
-            type="submit"
-            colorScheme="twitter" 
-            width="75%"
-            onSubmit={handleSubmit}>
-              Login
-            </Button>
+          <Flex justifyContent="center" >
+            {/* <Link to="/" > */}
+              <Button id="submit" 
+              colorScheme="twitter" 
+              width="75%"
+              onClick={handleSubmit} >
+                Login
+              </Button>
+            {/* </Link> */}
           </Flex>
         </FormControl>
       </Box>
