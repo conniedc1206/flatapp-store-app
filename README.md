@@ -11,7 +11,7 @@ Users will be able to:
 * Developers can upload their projects permanently to the platform using our “sellers” page
 
 Technologies used: 
-* Our frontend was built with React.js and communicates with our JSON server in our [backend](https://github.com/conniedc1206/phase-2-project-backend) 
+* Our frontend was built with React.js and communicates with our JSON server in our [backend](https://github.com/conniedc1206/flatapp-store-JSON-server-backend) 
 
 This project was created using [Create React App](https://create-react-app.dev/)
 
