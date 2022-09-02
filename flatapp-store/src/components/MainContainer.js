@@ -10,7 +10,7 @@ function MainContainer({ apps, setApps, handleSelectedApp }) {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/apps")
+    fetch("https://flatapp-store-backend.herokuapp.com/apps")
       .then((r) => r.json())
       .then(setApps);
   }, []);

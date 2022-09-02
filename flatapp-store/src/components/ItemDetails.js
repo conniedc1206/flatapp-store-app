@@ -31,7 +31,7 @@ function ItemDetails({ selectedApp, handleAddToCart, apps, setApps }) {
 
   const handleLikeClick = () => {
     setLiked((currentLike) => !currentLike);
-    fetch(`http://localhost:3000/apps/${selectedApp.id}`, {
+    fetch(`https://flatapp-store-backend.herokuapp.com/apps/${selectedApp.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
