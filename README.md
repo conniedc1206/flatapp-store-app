@@ -62,7 +62,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Creators
 ---
-Samantha Navarro [Github](https://github.com/samantha-navarro)  [Linkedin](https://www.linkedin.com/in/samantha-navarro8/)  
 Connie Park [Github](https://github.com/conniedc1206)  [Linkedin](https://www.linkedin.com/in/conniepark2)  
+Samantha Navarro [Github](https://github.com/samantha-navarro)  [Linkedin](https://www.linkedin.com/in/samantha-navarro8/)  
 Mark Reese [Github](https://github.com/marksreese)  [Linkedin](https://www.linkedin.com/in/mark-s-reese/)  
 Harrison Sabean [Github](https://github.com/Hsabes)  [Linkedin](https://www.linkedin.com/in/harrison-sabean/)  
