@@ -48,7 +48,7 @@ function Seller() {
       body: JSON.stringify({ ...formData, likes: 0 }),
     }
 
-    fetch("http://localhost:3000/apps", configObj)
+    fetch("https://flatapp-store-backend.herokuapp.com/apps", configObj)
     // .then((res) => res.json())
     // .then((data) => console.log(data) );
 
