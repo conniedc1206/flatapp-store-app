@@ -11,7 +11,7 @@ Users will be able to:
 * Developers can upload their projects permanently to the platform using our “sellers” page
 
 Technologies used: 
-* Our frontend was built with React.js and communicates with our json-server in our [backend](https://github.com/conniedc1206/phase-2-project-backend) 
+* Our frontend was built with React.js and communicates with our JSON server in our [backend](https://github.com/conniedc1206/phase-2-project-backend) 
 
 This project was created using [Create React App](https://create-react-app.dev/)
 
@@ -20,14 +20,14 @@ Our goal was to build an React application and simulate a professional work envi
 * plan out your wireframes and features
 * pitch our app in a project proposal
 * use Git/Github for our source control system to track code changes and collaborate with team
-* create a json-server to create a RESTful API and make both a GET and a POST request
+* create a JSON server to create a RESTful API and make both a GET and a POST request
 * utilize UI for our CSS styling
 
 ## Accomplishments
 * we were able to create 6 client-side routes using React Router in our nav bar/other UI element that allows users to navigate between routes
-* we created use a controlled form to make our POST request to our json-server
-* we used PATCH request to our json-server to persist the like counts
-* we rendered developers' apps onto our store page using array filter method and GET requests from our json-server
+* we created use a controlled form to make our POST request to our JSON server
+* we used PATCH request to our JSON server to persist the like counts
+* we rendered developers' apps onto our store page using array filter method and GET requests from our JSON server
 * we organized our code into purposeful components in order to keep it clean and dry
 * we incorporated a UI framework for our styling with [Chakra UI](https://chakra-ui.com/)
 
