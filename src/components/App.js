@@ -37,12 +37,6 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/flatapp-store-app">
-            <MainContainer
-              apps={apps}
-              setApps={setApps}
-              handleSelectedApp={handleSelectedApp}
-            />
         <Route path="/about">
           <About />
         </Route>
@@ -58,7 +52,12 @@ function App() {
         <Route path="/cart">
           <Cart cartApps={cartApps} handleRemoveFromCart={handleRemoveFromCart}/>
         </Route>
-        
+        <Route path="/flatapp-store-app">
+            <MainContainer
+              apps={apps}
+              setApps={setApps}
+              handleSelectedApp={handleSelectedApp}
+            />
         </Route>
         <Route path="/details/:id">
           <ItemDetails selectedApp={selectedApp} handleAddToCart={handleAddToCart} apps={apps} setApps={setApps}/>
