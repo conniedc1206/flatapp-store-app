@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/flatapp-store-app/static/css/main.3391893e.css",
+    "main.js": "/flatapp-store-app/static/js/main.58a64998.js",
+    "static/media/flatapplogo.png": "/flatapp-store-app/static/media/flatapplogo.5dfd43367888206e9736.png",
+    "index.html": "/flatapp-store-app/index.html",
+    "main.3391893e.css.map": "/flatapp-store-app/static/css/main.3391893e.css.map",
+    "main.58a64998.js.map": "/flatapp-store-app/static/js/main.58a64998.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3391893e.css",
+    "static/js/main.58a64998.js"
+  ]
+}
