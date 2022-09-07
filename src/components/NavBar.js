@@ -37,7 +37,7 @@ function NavBar() {
         </Box>
       </Flex>
       <Flex justifyContent="end">
-        <ReactLink to="/flatapp-store-app">
+        <ReactLink to="/">
           <Link
             margin="1rem 1rem"
             textDecoration="none"

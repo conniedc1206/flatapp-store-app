@@ -83,7 +83,7 @@ function About() {
         <Box marginTop="2%">
           <Heading size="md">We're glad to have you here!</Heading>
           <Heading marginBottom="2%" size="md">Now, let's get exploring!</Heading>
-          <Link to="/"> 
+          <Link to="/flatapp-store-app"> 
             <Button boxShadow='dark-lg' 
             p='6' rounded='md' 
             bg='white'

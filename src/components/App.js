@@ -52,7 +52,7 @@ function App() {
         <Route path="/cart">
           <Cart cartApps={cartApps} handleRemoveFromCart={handleRemoveFromCart}/>
         </Route>
-        <Route path="/flatapp-store-app">
+        <Route exact path="/">
             <MainContainer
               apps={apps}
               setApps={setApps}
