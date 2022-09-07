@@ -3,6 +3,8 @@
 
 FlatApp Store is an e-commerce platform designed to showcase single-page apps created by members of Flatiron “Stranger Strings” cohort, as well as other Flatiron students.
 
+[DEMO](https://conniedc1206.github.io/flatapp-store-app/)
+
 Users will be able to:
 * Browse and search for cool SPAs by up-and-coming developers from Flatiron
 * See detailed view of each app
@@ -12,8 +14,7 @@ Users will be able to:
 
 Technologies used: 
 * Our frontend was built with React.js and communicates with our JSON server in our [backend](https://github.com/conniedc1206/flatapp-store-JSON-server-backend) 
-
-This project was created using [Create React App](https://create-react-app.dev/)
+* This project was created using [Create React App](https://create-react-app.dev/)
 
 ## Goals
 Our goal was to build an React application and simulate a professional work environment:
